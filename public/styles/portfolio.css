@@ -22,8 +22,8 @@ body {
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
-    width: 300px;
-    height:300px;
+    width: 330px;
+    height:330px;
     border-width:thin;
     border-style: dotted;
 }
@@ -65,7 +65,7 @@ and (min-device-width : 1024px)
 and (max-device-width : 1366px)
 and (-webkit-min-device-pixel-ratio: 2){
     .column {
-        width: 75%;
+        width: 50%;
     }
 }
 
