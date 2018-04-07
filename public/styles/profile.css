@@ -1,0 +1,45 @@
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.panel-default{
+    color:red;
+}
+
+div.gallery {
+    border: 2px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 2px solid black;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    image-rendering: auto;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+.responsive {
+    padding: 0 4px;
+    float: left;
+    width: 25%;
+}
+@media only screen and (max-width: 400px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .responsive {
+        width: 100%;
+    }
+
+}
