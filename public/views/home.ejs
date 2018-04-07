@@ -8,8 +8,23 @@
             background-image:url(https://i2.wp.com/www.photoblog.com/learn/wp-content/uploads/2017/09/zoom-lens-bird-photo.jpg?resize=1320%2C742&ssl=1);
             background-size: cover;
             background-repeat: no-repeat;
+
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .Text {
+                font-size: 14px;
+            }
+
         }
 
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .Text {
+                font-size: 20px;
+            }
+
+        }
         .Text{
             color:white;
 
@@ -27,7 +42,7 @@
 <% include partials/header %>
 <div class="container" >
     <h1 class = 'center Text'>Join Click'o'Blog</h1>
-    <h2 class ='center Text'>Spread love with your pics !!</h2>
+    <h2 class ='center Text'>Spread love with your pics !!</h2></br>
     <a type='button' class ='btn btn-default btn-lg' href="/signUp" >Sign Up</a>
 
 </div>
