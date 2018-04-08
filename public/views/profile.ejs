@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../styles/profile.css">
 
 </head>
+
 <body ng-app ='app' ng-controller="profileCtrl">
+
 <% include partials/header %>
 <div class="container-fluid bg-1 text-center">
     <h4>Welcome <%=user.username%></h4>
@@ -49,26 +51,32 @@
         </div>
     </div>
 </div></br></br>
+
 <div class="container-fluid bg-1 text-center">
     <h4 >Your Photo Stream</h4>
 </div></br></br>
 
 
-<div ng-if='imagePresent' ng-repeat="filename in filenames" class="responsive">
-    <div class = 'gallery'>
-        <a target="_blank" href="image/{{filename}}">
+<div class="row" ng-if='imagePresent'>
 
-            <img src="image/{{filename}}" alt="">
+  <div class = 'column'  ng-repeat="filename in filenames">
+           <div class ='content'>
+                <a target="_blank" href="image/{{filename}}">
 
-        </a>
-    </div>
+                    <img src="image/{{filename}}" alt="" style='width:100%'>
 
+                </a>
+            </div>
+  </div>
 </div>
+
 <div ng-if = "imageNotPresent">
     <h5>No Image to display</h5>
 </div>
 
 <script src="../controllers/profile.controller.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src ='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jqlight.lazyloadxt.min.js'></script>
 <script>
     var user1 = '<%=user.username%>';
     angular.module('app').constant("User",user1);
