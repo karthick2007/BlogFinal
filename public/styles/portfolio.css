@@ -9,7 +9,11 @@ body {
 }
 
 .row {
-    margin: 8px -16px;
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 
 }
 
@@ -22,8 +26,8 @@ body {
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
-    width: 330px;
-    height:330px;
+    width:25%;
+    height:auto;
     border-width:thin;
     border-style: dotted;
 }
@@ -45,11 +49,7 @@ body {
     display: table;
     clear: both;
 }
-.img{
-    width:200px;
-    height:200px;
 
-}
 /* Content */
 .content {
     background-color: white;

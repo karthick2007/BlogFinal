@@ -16,16 +16,16 @@
     <%files.forEach(function(file){%>
 
     <div class ='column'>
-        <div class ='content'>
+        <div class ='content' style ='width:100%'>
             <a target="_blank" href="image/<%=file.filename%>">
                 <% if(file.isImage){%>
-                <img src="image/<%= file.filename %>" alt="" style ="width:100%">
+                <img src="image/<%= file.filename %>" alt="" style = 'width:100%'>
             </a>
             <%}else{%>
             <%=file.filename%>
             <%}%>
         </div>
-        <h3 style='text-align: center'class="title"><%=file.metadata.title%></h3>
+        <h4 style='text-align: center'class="title"><%=file.metadata.title%></h4>
         <h6 style='text-align: center' class ='photographer'><b>Photographed by: <%=file.metadata.username%></b></h6>
     </div>
     <%})%>
