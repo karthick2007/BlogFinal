@@ -61,10 +61,12 @@
 
   <div class = 'column'  ng-repeat="filename in filenames">
            <div class ='content'>
+               <form method="POST" action="{{getDeleteURL(filename)}}" >
+               <button class="btn btn-default btn-xs pull-right" data-toggle="tooltip" title="Delete Pic"
+                       data-placement="top">X</button>
+               </form>
                 <a target="_blank" href="image/{{filename}}">
-
                     <img src="image/{{filename}}" alt="" style='width:100%'>
-
                 </a>
             </div>
   </div>

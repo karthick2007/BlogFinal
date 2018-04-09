@@ -134,5 +134,16 @@ module.exports =function(app){
         })
     })
 
+    // Delete Pic from Profile page
+
+    app.delete('/image/:filename',function(req,res){
+        gfs.remove({filename:req.params.filename,root:'uploads'},function(err,gridStore){
+            if(err){
+                return res.status(404).json({err:err});
+            }
+            res.redirect('/profile');
+        })
+    })
+
 
 }

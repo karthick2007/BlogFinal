@@ -18,8 +18,11 @@ angular.module('app')
                         angular.forEach(Data,function(value,key){
                             if(value.metadata.username == User) {
                                 filename1[i] = value.filename;
+                                $scope.getDeleteURL = function (filename2) {
+                                    return 'image/' +filename2+'?_method=DELETE';
+                                };
                                 i++;
-                            }
+                            };
                         })
                         //console.log(filename1);
                         $scope.filenames = filename1;
@@ -34,4 +37,6 @@ angular.module('app')
 
         }
         refresh();
+
+
     })
